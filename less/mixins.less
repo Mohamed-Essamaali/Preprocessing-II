@@ -1,1 +1,12 @@
 // Mixins in here
+.display-flex(@j,@a,@flx-direct){
+    display: flex;
+    justify-content: @j;
+    align-items: @a;
+    flex-direction: @flx-direct;
+
+}
+.border-style(@t,@b) {
+    margin-top: @t solid @silver;
+    margin-bottom:@b dashed @silver;
+}
