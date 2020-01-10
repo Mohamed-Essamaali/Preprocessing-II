@@ -1,18 +1,21 @@
 *{
   color:@font-color;
 }
+h2 {
+  .fnt-w(700);
+}
 
 header{
   display: flex;
   flex-direction:column;
-   width:50%;
-   margin:0 25%;
+   width:80vw;
+   margin:0 10%;
   
   
   img{
     display: flex;
     align-self:center ;
-    width:50vw;
+    width:80vw;
     border-top: 2px dashed @navigation-border;
     
   }
@@ -29,15 +32,23 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile{
+      .display-flex(center,center, column);
+      
+  }
 
-   
-    
     .text-content {
+      @media @mobile{
+        width:80%;
+      }
       width: 48%;
       padding-right: 1%;
     }
 
     .img-content {
+      @media @mobile{
+        width:80%;
+      }
       width: 48%;
       padding-left: 1%;
 
@@ -50,7 +61,10 @@ header{
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    @media @mobile{
+      display:flex;
+      flex-direction:column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -76,21 +90,31 @@ header{
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile{
+      .display-flex(center,center, column);
+     
+    } 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-      .btn {
+      @media @mobile{
         width:80%;
-        height:20%;
-        border-radius:10px;
-        background:@button-bg;
-        padding:5% 10%;
-        text-align: center;
-        font-size: 2rem;
-        color: white;
+        margin:0 10%;
+      }
+      .btn {
 
+        .btn-mix(5% 10%, 80%, @button-bg, 2rem, white);  
+        @media @mobile{
+          .btn-mix(3% 10%, 90%, @button-bg, 2rem, white); 
+          margin: 2% 2.5%;
+        }   
+        
+        border-radius:10px;
+        text-align: center;
+        }
+      h4 {
+        .fnt-w(600);
       }
     }
   }
-}// home
+}//home

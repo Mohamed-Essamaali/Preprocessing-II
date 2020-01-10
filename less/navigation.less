@@ -4,31 +4,45 @@
 
     padding:2% 2.5%;
     width:100%;
-    
-    // border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile{
+        .display-flex(center,center, column);
+              
+    }
     
     h1{
         display: flex;
         align-self:center ;
          width:30%;
-        margin: 0 15% 0 0 ;
+        margin: 0 20% 0 0 ;
        
-        // padding: 0 5%;
+        @media @mobile {
+            font-size:3rem;
+            .fnt-w(550);
+            justify-content: center;
+            width:100%;
+            padding: 3%;
+            
+          ;
+        }
         
 
     }
     nav{
-        border-top:
+        
         .display-flex(space-between,center, row);
         width:50%;
-        display: flex;
+        
         align-self:center ;
-       
+        
+        @media @mobile {
+            
+            width:100%;
+        }
 
         a{
             width:24%;
-            // padding:1% 2.5%;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-decoration: none;
            
         }

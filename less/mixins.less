@@ -1,4 +1,6 @@
 // Mixins in here
+
+// display properties
 .display-flex(@j,@a,@flx-direct){
     display: flex;
     justify-content: @j;
@@ -6,7 +8,20 @@
     flex-direction: @flx-direct;
 
 }
+// borders between sections
 .border-style(@t,@b) {
     margin-top: @t solid @silver;
     margin-bottom:@b dashed @silver;
+}
+// destination section buttons
+.btn-mix(@padd, @wid,@bg,@ftsz,@colr ) {
+padding:@padd;
+width:@wid;
+background:@bg;
+font-size:@ftsz;  
+color:@colr;  
+
+}
+.fnt-w(@sze){
+    font-weight: @sze;
 }
